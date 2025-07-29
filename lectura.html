@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lectura y Alma - Luciérnaga Sabionda</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="images/luciernaga-icon.png" type="image/png">
+</head>
+<body>
+  <header class="portada">
+    <h1>Lectura y Alma</h1>
+    <p>Palabras que germinan luz interior</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="reflexiones.html">Reflexiones</a></li>
+      <li><a href="escritura.html">Escritura Propia</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="lectura">
+      <div class="hoja">
+        <img src="images/libro.png" alt="Icono de lectura" style="width: 40px;">
+        <p>“Lo que el alma reconoce, el libro lo susurra.”</p>
+      </div>
+    </section>
+
+    <section class="lectura">
+      <div class="hoja">
+        <img src="images/libro.png" alt="Icono de lectura" />
+        <p>«Lo que el alma tiene de inmortal, lo tiene de inmaterial.»</p>
+      </div>
+      <div class="hoja">
+        <img src="images/libro.png" alt="Icono de lectura" />
+        <p>«Leer es respirar con ojos abiertos.»</p>
+      </div>
+      <div class="hoja">
+        <img src="images/libro.png" alt="Icono de lectura" />
+        <p>«Cada palabra despierta una luciérnaga interior.»</p>
+      </div>
+    </section>
+
+    <div class="carrusel">
+      <div class="hoja">«Leer es respirar con ojos abiertos.»</div>
+      <div class="hoja">«Cada palabra despierta una luciérnaga interior.»</div>
+      <div class="hoja">«Lo que el alma tiene de inmortal, lo tiene de inmaterial.»</div>
+    </div>
+
+    <div class="luci">
+      <img src="images/luci.png" alt="Luciérnaga" />
+      <div class="mensaje">«Pensar con luz propia es recordar con el alma.»</div>
+    </div>
+
+    <div class="fondo-svg">
+      <svg width="100%" height="100%" viewBox="0 0 800 400" preserveAspectRatio="none">
+        <path d="M0,200 Q200,100 400,200 T800,200" fill="none" stroke="#c2b9a1" stroke-width="2" opacity="0.4"/>
+        <circle cx="150" cy="180" r="4" fill="#d8cbb7" opacity="0.6"/>
+        <circle cx="350" cy="220" r="5" fill="#e0d2c0" opacity="0.4"/>
+        <circle cx="650" cy="200" r="3" fill="#e8dbc9" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <div class="luci">
+      <img src="images/luci.png" alt="Luciérnaga" />
+      <div class="mensaje">«Toda semilla contiene una galaxia.»</div>
+    </div>
+    <div class="luci">
+      <img src="images/luci.png" alt="Luciérnaga" />
+      <div class="mensaje">«Cada clic despierta una conciencia.»</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Roxana Salazar - Luciérnaga Sabionda</p>
+  </footer>
+
+  <audio autoplay loop>
+    <source src="sounds/bosque.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <button class="modoNoche" onclick="document.body.classList.toggle('noche')">
+    Encender modo noche 🌙
+  </button>
+
+  <div class="luciernagas">
+    <div class="flotante"></div>
+    <div class="flotante"></div>
+    <div class="flotante"></div>
+  </div>
+
+  <script>
+    const secciones = document.querySelectorAll('section');
+    const observar = new IntersectionObserver((entradas) => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('aparece');
+        }
+      });
+    }, { threshold: 0.3 });
+    secciones.forEach(sec => observar.observe(sec));
+  </script>
+</body>
+</html>
+
