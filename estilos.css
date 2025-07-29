@@ -96,7 +96,9 @@ main {
 /* Íconos dentro de hexágonos */
 .hexagono img {
   margin-bottom: 15px;
-  max-width: 50px;
+  width: 40%;
+  height: auto;
+  filter: drop-shadow(0 0 4px #fff5cc);
 }
 
 /* Botón modo noche */
