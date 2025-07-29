@@ -278,4 +278,16 @@ section.aparece {
   50% { opacity: 0.6; }
 }
 @keyframes mover {
-  0% { transform: translateY(0px) translateX(0px
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+}
