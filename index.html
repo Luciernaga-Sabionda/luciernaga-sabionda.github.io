@@ -1,72 +1,68 @@
-<section class="iconografia">
-  <h2>🌿 Imágenes simbólicas</h2>
-
-  <div class="icon-grid">
-    <figure class="icon-item">
-      <img src="imagenes/libro.png" alt="Ícono de lectura">
-      <figcaption>Lectura</figcaption>
-    </figure>
-
-    <figure class="icon-item">
-      <img src="imagenes/abejorro.jpg" alt="Símbolo abejorro">
-      <figcaption>Abejorro</figcaption>
-    </figure>
-
-    <figure class="icon-item">
-      <img src="imagenes/espiral.jpg" alt="Imagen de reflexión">
-      <figcaption>Reflexión</figcaption>
-    </figure>
-
-    <figure class="icon-item">
-      <img src="imagenes/logotipo.png" alt="Logo principal">
-      <figcaption>Logo</figcaption>
-    </figure>
-
-    <figure class="icon-item">
-      <img src="imagenes/portada.png" alt="Imagen de bienvenida">
-      <figcaption>Portada</figcaption>
-    </figure>
-  </div>
-</section>
-
-<style>
-  .iconografia {
-    text-align: center;
-    padding: 40px;
-    background-color: #FFF6E5;
-  }
-
-  .iconografia h2 {
-    font-family: 'Pacifico', cursive;
-    color: #2A9D8F;
-    margin-bottom: 30px;
-  }
-
-  .icon-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .icon-item {
-    width: 120px;
-    text-align: center;
-  }
-
-  .icon-item img {
-    width: 80px;
-    border-radius: 8px;
-  }
-
-  @media (max-width: 600px) {
-    .icon-grid {
-      flex-direction: column;
-      align-items: center;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luciérnaga Sabionda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
     }
-
-    .icon-item {
-      margin-bottom: 20px;
+    header {
+      background: #6a1b9a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
     }
-  }
-</style>
+    main {
+      padding: 2rem;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .galeria img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #4a148c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenida a Luciérnaga Sabionda</h1>
+    <p>Un espacio para aprender y compartir</p>
+  </header>
+  
+  <main>
+    <h2>Galería de imágenes</h2>
+    <div class="galeria">
+      <img src="https://via.placeholder.com/300x200.png?text=Imagen+1" alt="Imagen 1" />
+      <img src="https://via.placeholder.com/300x200.png?text=Imagen+2" alt="Imagen 2" />
+      <img src="https://via.placeholder.com/300x200.png?text=Imagen+3" alt="Imagen 3" />
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Luciérnaga Sabionda. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
