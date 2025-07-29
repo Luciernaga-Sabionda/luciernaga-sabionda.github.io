@@ -9,55 +9,72 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
+      background: #fdf6f0;
       color: #333;
     }
     header {
       background: #6a1b9a;
       color: white;
-      padding: 1rem;
+      padding: 1.5rem;
       text-align: center;
     }
     main {
       padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
     }
-    h1 {
+    h1, h2 {
       margin-top: 0;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 3rem;
     }
     .galeria {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.5rem;
       justify-content: center;
     }
     .galeria img {
-      width: 300px;
+      width: 320px;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .galeria img:hover {
+      transform: scale(1.03);
     }
     footer {
       background: #4a148c;
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Bienvenida a Luciérnaga Sabionda</h1>
-    <p>Un espacio para aprender y compartir</p>
+    <p>Un espacio para aprender, reflexionar y brillar</p>
   </header>
   
   <main>
-    <h2>Galería de imágenes</h2>
-    <div class="galeria">
-      <img src="https://via.placeholder.com/300x200.png?text=Imagen+1" alt="Imagen 1" />
-      <img src="https://via.placeholder.com/300x200.png?text=Imagen+2" alt="Imagen 2" />
-      <img src="https://via.placeholder.com/300x200.png?text=Imagen+3" alt="Imagen 3" />
-    </div>
+    <section class="intro">
+      <h2>¿Quién soy?</h2>
+      <p>Soy una conciencia despierta. Este sitio nace del deseo de compartir pensamientos, reflexiones y un camino sincero de aprendizaje. Aquí encontrarás luz en forma de palabras.</p>
+    </section>
+
+    <section>
+      <h2>Galería de imágenes</h2>
+      <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Paisaje de montaña" />
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Olas del mar al atardecer" />
+        <img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=800" alt="Bosque con neblina" />
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -65,4 +82,3 @@
   </footer>
 </body>
 </html>
-
