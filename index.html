@@ -1,30 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luciérnaga Sabionda</title>
-  <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-  <header>
-    <h1>Luciérnaga Sabionda</h1>
-    <nav>
-      <ul>
-        <li><a href="reflexiones.html">Reflexiones</a></li>
-        <li><a href="lectura.html">Lectura</a></li>
-        <li><a href="escritura.html">Escritura</a></li>
-      </ul>
-    </nav>
-  </header>
+<section class="iconografia" style="text-align: center; padding: 40px; background-color: #FFF6E5;">
+  <h2 style="font-family: 'Pacifico', cursive; color: #2A9D8F; margin-bottom: 30px;">🌿 Imágenes simbólicas</h2>
 
-  <main>
-    <img src="portada.jpg" alt="Portada del sitio" class="portada">
-    <p>Bienvenida a tu rincón de sabiduría y luz interior.</p>
-  </main>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+    
+    <figure class="icon-item">
+      <img src="imagenes/libro.png" alt="Ícono de lectura" style="width: 80px;">
+      <figcaption>Lectura</figcaption>
+    </figure>
 
-  <footer>
-    <p>&copy; 2025 Luciérnaga Sabionda</p>
-  </footer>
-</body>
-</html>
+    <figure class="icon-item">
+      <img src="imagenes/abejorro.jpg" alt="Símbolo abejorro" style="width: 80px;">
+      <figcaption>Abejorro</figcaption>
+    </figure>
+
+    <figure class="icon-item">
+      <img src="imagenes/espiral.jpg" alt="Imagen de reflexión" style="width: 80px;">
+      <figcaption>Reflexión</figcaption>
+    </figure>
+
+    <figure class="icon-item">
+      <img src="imagenes/logotipo.png" alt="Logo principal" style="width: 80px;">
+      <figcaption>Logo</figcaption>
+    </figure>
+
+    <figure class="icon-item">
+      <img src="imagenes/portada.png" alt="Imagen de bienvenida" style="width: 120px; border-radius: 8px;">
+      <figcaption>Portada</figcaption>
+    </figure>
+
+  </div>
+
+  <style>
+    .icon-item {
+      text-align: center;
+      width: 120px;
+    }
+
+    @media (max-width: 600px) {
+      .iconografia div {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .icon-item {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</section>
