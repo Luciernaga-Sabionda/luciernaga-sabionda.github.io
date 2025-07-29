@@ -1,4 +1,6 @@
-/* Fuente principal */
+/*---------------------------------------
+  FUENTE PRINCIPAL Y CONFIGURACIÓN GLOBAL
+----------------------------------------*/
 body {
   font-family: 'Cormorant Garamond', serif;
   margin: 0;
@@ -8,7 +10,9 @@ body {
   line-height: 1.6;
 }
 
-/* Portada / Encabezado */
+/*---------------------------------------
+  ENCABEZADO / PORTADA
+----------------------------------------*/
 .portada {
   background: url('../images/fondo-bosque.svg') no-repeat center center;
   background-size: cover;
@@ -27,7 +31,38 @@ body {
   opacity: 0.9;
 }
 
-/* Sección de manifiesto */
+/*---------------------------------------
+  NAVEGACIÓN
+----------------------------------------*/
+nav {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2f2f2f;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #557755;
+}
+
+/*---------------------------------------
+  SECCIÓN MANIFIESTO / INTRODUCCIÓN
+----------------------------------------*/
 .manifesto {
   max-width: 800px;
   margin: 4rem auto;
@@ -38,7 +73,8 @@ body {
   animation: fadeIn 1.5s ease-in;
 }
 
-.manifesto h1, .manifesto h2 {
+.manifesto h1,
+.manifesto h2 {
   text-align: center;
   color: #3a3a3a;
 }
@@ -67,41 +103,16 @@ body {
   color: #777;
 }
 
-/* Navegación */
-nav {
-  background-color: #f5f5f5;
-  padding: 1rem;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #2f2f2f;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #557755;
-}
-
-/* Lectura */
+/*---------------------------------------
+  SECCIÓN LECTURA
+----------------------------------------*/
 .lectura {
   max-width: 800px;
   margin: 3rem auto;
   padding: 2rem;
   background: #fffdf8;
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
   animation: fadeIn 1s ease;
 }
 
@@ -119,7 +130,7 @@ nav a:hover {
   margin-bottom: 1.5rem;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
@@ -132,6 +143,9 @@ nav a:hover {
   height: 40px;
 }
 
+/*---------------------------------------
+  PIE DE PÁGINA
+----------------------------------------*/
 footer {
   text-align: center;
   padding: 2rem;
@@ -140,13 +154,23 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Animaciones */
+/*---------------------------------------
+  ANIMACIONES
+----------------------------------------*/
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsividad */
+/*---------------------------------------
+  RESPONSIVIDAD
+----------------------------------------*/
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -162,3 +186,4 @@ footer {
     margin-bottom: 0.5rem;
   }
 }
+
