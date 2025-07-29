@@ -1,50 +1,72 @@
-<section class="iconografia" style="text-align: center; padding: 40px; background-color: #FFF6E5;">
-  <h2 style="font-family: 'Pacifico', cursive; color: #2A9D8F; margin-bottom: 30px;">🌿 Imágenes simbólicas</h2>
+<section class="iconografia">
+  <h2>🌿 Imágenes simbólicas</h2>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-    
+  <div class="icon-grid">
     <figure class="icon-item">
-      <img src="imagenes/libro.png" alt="Ícono de lectura" style="width: 80px;">
+      <img src="imagenes/libro.png" alt="Ícono de lectura">
       <figcaption>Lectura</figcaption>
     </figure>
 
     <figure class="icon-item">
-      <img src="imagenes/abejorro.jpg" alt="Símbolo abejorro" style="width: 80px;">
+      <img src="imagenes/abejorro.jpg" alt="Símbolo abejorro">
       <figcaption>Abejorro</figcaption>
     </figure>
 
     <figure class="icon-item">
-      <img src="imagenes/espiral.jpg" alt="Imagen de reflexión" style="width: 80px;">
+      <img src="imagenes/espiral.jpg" alt="Imagen de reflexión">
       <figcaption>Reflexión</figcaption>
     </figure>
 
     <figure class="icon-item">
-      <img src="imagenes/logotipo.png" alt="Logo principal" style="width: 80px;">
+      <img src="imagenes/logotipo.png" alt="Logo principal">
       <figcaption>Logo</figcaption>
     </figure>
 
     <figure class="icon-item">
-      <img src="imagenes/portada.png" alt="Imagen de bienvenida" style="width: 120px; border-radius: 8px;">
+      <img src="imagenes/portada.png" alt="Imagen de bienvenida">
       <figcaption>Portada</figcaption>
     </figure>
-
   </div>
-
-  <style>
-    .icon-item {
-      text-align: center;
-      width: 120px;
-    }
-
-    @media (max-width: 600px) {
-      .iconografia div {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .icon-item {
-        margin-bottom: 20px;
-      }
-    }
-  </style>
 </section>
+
+<style>
+  .iconografia {
+    text-align: center;
+    padding: 40px;
+    background-color: #FFF6E5;
+  }
+
+  .iconografia h2 {
+    font-family: 'Pacifico', cursive;
+    color: #2A9D8F;
+    margin-bottom: 30px;
+  }
+
+  .icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .icon-item {
+    width: 120px;
+    text-align: center;
+  }
+
+  .icon-item img {
+    width: 80px;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 600px) {
+    .icon-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .icon-item {
+      margin-bottom: 20px;
+    }
+  }
+</style>
