@@ -1,102 +1,293 @@
-/* Estilos generales */
+/* ================= TIPOGRAFÍAS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito&display=swap');
+
+/* ================= ESTILO GENERAL ================= */
 body {
-  background-color: #0f0f1a;
-  color: #f0f0e8;
-  font-family: 'Georgia', serif;
-  line-height: 1.7;
   margin: 0;
-  padding: 2rem;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="1" fill="%23ffffff22"/></svg>');
-  background-repeat: repeat;
+  font-family: 'Nunito', sans-serif;
+  background-color: #FEF9F3;
+  color: #264653;
 }
 
-/* Encabezado */
-h1 {
-  font-size: 3rem;
+/* ================= PORTADA PRINCIPAL ================= */
+.portada {
+  background-image: url("../images/portada.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 160px 20px;
   text-align: center;
-  color: #ffe066;
-  margin-bottom: 2rem;
+  position: relative;
+}
+.portada::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+.portada h1, .portada p, .portada img {
+  position: relative;
+  z-index: 2;
+  color: #2A9D8F;
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8em;
+  margin-bottom: 0.3em;
+}
+.logo {
+  height: 90px;
+  margin-bottom: 15px;
 }
 
-/* Subtítulos */
-h2 {
-  font-size: 1.5rem;
-  color: #ffdd99;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #444;
-  padding-bottom: 0.3rem;
-}
-
-/* Lista de características */
-ul {
-  list-style-type: none;
-  padding-left: 1rem;
-}
-
-ul li::before {
-  content: "✨ ";
-  color: #ffe066;
-}
-
-/* Párrafos */
-p {
-  margin-bottom: 1.2rem;
-}
-
-/* Citas */
-blockquote {
-  border-left: 4px solid #555;
-  padding-left: 1rem;
-  font-style: italic;
-  color: #ccc;
-  margin: 2rem 1rem;
-}
-
-/* Firma */
-.firma {
-  text-align: right;
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 2rem;
-}
-
-/* Navegación */
+/* ================= MENÚ DE NAVEGACIÓN ================= */
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 3rem;
-  padding: 0;
-  list-style: none;
+  gap: 30px;
+  padding: 15px;
+  background-color: #F4A261;
 }
-
 nav a {
   text-decoration: none;
-  color: #ffd43b;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+  color: #264653;
+  font-weight: 600;
+  font-size: 1.1em;
 }
-
 nav a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 8px #ffd43b;
+  color: #2A9D8F;
+  text-decoration: underline;
+  transition: all 0.3s ease;
 }
 
-/* Animación de fondo sutil */
-@keyframes flotando {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-4px); }
-  100% { transform: translateY(0px); }
+/* ================= PIE DE PÁGINA ================= */
+footer {
+  text-align: center;
+  background-color: #FFD95E;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #264653;
 }
 
-li, p, blockquote {
-  animation: flotando 6s ease-in-out infinite;
+/* ================= HEXÁGONOS DE REFLEXIONES ================= */
+.reflexiones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+  background-color: #FFF6E5;
+}
+.hexagono {
+  width: 220px;
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  background-color: #E9C46A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1em;
+  color: #264653;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.hexagono:hover {
+  transform: scale(1.05);
+  background-color: #F4A261;
 }
 
-  .hoja img {
-    margin-bottom: 0.5rem;
+/* ================= SECCIÓN LECTURA ================= */
+.lectura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #f8f5ee, #eae6dc);
+  padding: 30px;
+  gap: 20px;
+}
+.hoja {
+  background-color: #ffffffcc;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(200, 190, 170, 0.4);
+  animation: flotacion 6s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+.hoja:hover {
+  transform: scale(1.05);
+}
+.hoja img {
+  width: 40px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.hoja p {
+  font-family: 'Georgia', serif;
+  font-size: 1.1em;
+  color: #5d4b3a;
+  line-height: 1.4;
+}
+
+/* ================= CARRUSEL DE FRASES ================= */
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, #f8f5ee, #eae6dc);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(180, 170, 150, 0.3);
+}
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+.carrusel .hoja {
+  min-width: 300px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  background-color: #ffffffcc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-size: 1.1em;
+  color: #5d4b3a;
+  animation: flotacion 6s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+.carrusel .hoja:hover {
+  transform: scale(1.05);
+}
+
+/* ================= LUCIÉRNAGAS INTERACTIVAS ================= */
+.luci {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+  animation: parpadeo 4s infinite;
+}
+.luci img {
+  width: 50px;
+  transition: transform 0.3s;
+}
+.luci:hover img {
+  transform: scale(1.1);
+}
+.mensaje {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff7eec0;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(220, 200, 180, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-size: 0.95em;
+  width: 220px;
+  text-align: center;
+  pointer-events: none;
+  color: #5d4b3a;
+}
+.luci:hover .mensaje {
+  opacity: 1;
+}
+
+/* ================= RAMAS SVG DE FONDO ================= */
+.fondo-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ================= MODO NOCHE ================= */
+.modoNoche {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #264653;
+  color: #fef9f3;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  z-index: 1000;
+}
+body.noche {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+}
+body.noche .hoja,
+body.noche .carrusel .hoja {
+  background-color: #2d2d2d;
+  color: #f3e8d7;
+}
+
+/* ================= LUCIÉRNAGAS FLOTANTES ================= */
+.luciernagas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.flotante {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffd95e 0%, transparent 70%);
+  border-radius: 50%;
+  position: absolute;
+  animation: mover 15s linear infinite;
+}
+.flotante:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.flotante:nth-child(2) { top: 50%; left: 60%; animation-delay: 4s; }
+.flotante:nth-child(3) { top: 80%; left: 30%; animation-delay: 8s; }
+
+/* ================= TRANSICIÓN AL HACER SCROLL ================= */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+section.aparece {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* ================= ANIMACIONES CLAVE ================= */
+@keyframes flotacion {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
   }
 }
-
